@@ -15,33 +15,34 @@ import SellWithUsPage from "./pages/SellWithUsPage"; // 1. استيراد الص
 import ContactPage from "./pages/ContactPage";
 import TrackOrderPage from "./pages/TrackOrderPage";
 import ProfilePage from "./pages/ProfilePage";
-import { Toaster } from 'react-hot-toast'; // 1. استيراد المكتبة
+import { Toaster } from "react-hot-toast"; // 1. استيراد المكتبة
+import AllProductsPage from "./pages/AllProductsPage";
 
 function App() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-200 font-sans selection:bg-cyan-500 selection:text-slate-900">
       <Navbar />
       <ScrollToTop />
-      <Toaster 
+      <Toaster
         position="bottom-right" // مكان الظهور (أسفل يمين)
         toastOptions={{
           style: {
-            background: '#0f172a', // لون خلفية داكن (slate-900)
-            color: '#fff',         // لون النص أبيض
-            border: '1px solid #334155', // حدود رمادية
-            padding: '16px',
-            borderRadius: '12px',
+            background: "#0f172a", // لون خلفية داكن (slate-900)
+            color: "#fff", // لون النص أبيض
+            border: "1px solid #334155", // حدود رمادية
+            padding: "16px",
+            borderRadius: "12px",
           },
           success: {
             iconTheme: {
-              primary: '#06b6d4', // لون الأيقونة (cyan-500)
-              secondary: '#fff',
+              primary: "#06b6d4", // لون الأيقونة (cyan-500)
+              secondary: "#fff",
             },
           },
           error: {
             iconTheme: {
-              primary: '#ef4444', // لون الأحمر للخطأ
-              secondary: '#fff',
+              primary: "#ef4444", // لون الأحمر للخطأ
+              secondary: "#fff",
             },
           },
         }}
@@ -57,6 +58,7 @@ function App() {
         <Route path="/track-order" element={<TrackOrderPage />} />
         <Route path="/login" element={<LoginRegister />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
+        <Route path="/products" element={<AllProductsPage />} />
         <Route path="/sell" element={<SellWithUsPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/contact" element={<ContactPage />} />

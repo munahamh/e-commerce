@@ -1,6 +1,7 @@
 import React from "react";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import HeroFoto from "../../assets/imgs/headphone.jpg"
 
 const Hero = () => {
   return (
@@ -37,7 +38,7 @@ const Hero = () => {
 
       {/* صورة الخلفية */}
       <img
-        src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+        src={HeroFoto}
         alt="Hero BG"
         className="absolute inset-0 w-full h-full object-cover opacity-50"
       />

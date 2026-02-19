@@ -122,8 +122,12 @@ const ShopProvider = ({ children }) => {
     });
   };
 
-  const getCartTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.qty, 0);
+ const getCartTotal = () => {
+    // 1. نحسب المجموع الكلي
+    const total = cartItems.reduce((total, item) => total + item.price * item.qty, 0);
+    
+    // 2. نجبر الرقم على عرض خانتين فقط بعد الفاصلة
+    return total.toFixed(2); 
   };
 
   const getCartCount = () => {
