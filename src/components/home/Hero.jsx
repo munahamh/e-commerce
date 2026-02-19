@@ -40,7 +40,7 @@ const Hero = () => {
       <img
         src={HeroFoto}
         alt="Hero BG"
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
+        className="absolute inset-0 w-full h-full object-cover opacity-75"
       />
     </div>
   );
