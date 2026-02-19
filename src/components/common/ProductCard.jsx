@@ -15,7 +15,7 @@ const ProductCard = ({ id, image, title, price, category }) => {
     <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.15)] transition group relative h-full flex flex-col">
       
       {/* حاوية الصورة */}
-      <div className="h-48 w-full bg-slate-800 relative overflow-hidden p-4 flex items-center justify-center">
+      <div className="h-48 w-full bg-slate-800 relative overflow-hidden p-4 flex items-center justify-center transform-gpu">
         
         {/* 👇 2. جعل الصورة رابطاً ينقل لصفحة التفاصيل */}
         <Link to={`/product/${id}`} className="w-full h-full flex items-center justify-center">
